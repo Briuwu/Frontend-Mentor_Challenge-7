@@ -1,0 +1,186 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Red+Hat+Display:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap");
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  font-size: 62.50%;
+  min-height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  padding: 4em;
+  background: url(../images/bg-mobile.svg) no-repeat;
+  background-color: #674baf;
+  color: white;
+}
+
+@media only screen and (min-width: 376px) {
+  body {
+    background: url(../images/bg-desktop.svg) no-repeat;
+    background-size: 50vh auto;
+    background-position: top;
+    background-color: #674baf;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  body {
+    background: url(../images/bg-desktop.svg) no-repeat;
+    background-position: center;
+    background-color: #674baf;
+  }
+}
+
+img {
+  display: block;
+  max-width: 90%;
+}
+
+.grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  gap: 7em;
+}
+
+.grid__logo {
+  cursor: pointer;
+  width: 13em;
+  -webkit-transition: -webkit-transform 300ms ease;
+  transition: -webkit-transform 300ms ease;
+  transition: transform 300ms ease;
+  transition: transform 300ms ease, -webkit-transform 300ms ease;
+}
+
+.grid__logo:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+.grid__hero {
+  place-self: center;
+  -webkit-transition: -webkit-transform 300ms ease;
+  transition: -webkit-transform 300ms ease;
+  transition: transform 300ms ease;
+  transition: transform 300ms ease, -webkit-transform 300ms ease;
+}
+
+.grid__hero:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+@media only screen and (min-width: 600px) {
+  .grid {
+    gap: 1.5em;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+  .grid__logo {
+    width: 18em;
+    grid-column: span 2;
+    padding-bottom: 5em;
+    margin-left: 3em;
+  }
+}
+
+.detail {
+  text-align: center;
+}
+
+.detail__title {
+  font-size: 1.5rem;
+  margin-bottom: 1em;
+}
+
+.detail__info {
+  font-size: 1rem;
+  margin-bottom: 1.5em;
+}
+
+.detail__btn {
+  display: inline-block;
+  background-color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 0.7em 4em;
+  border-radius: 5em;
+  color: #674baf;
+  -webkit-box-shadow: 0px 10px 10px -8px rgba(0, 0, 0, 0.67);
+          box-shadow: 0px 10px 10px -8px rgba(0, 0, 0, 0.67);
+  -webkit-transition: -webkit-transform 300ms ease;
+  transition: -webkit-transform 300ms ease;
+  transition: transform 300ms ease;
+  transition: transform 300ms ease, -webkit-transform 300ms ease;
+}
+
+.detail__btn:hover {
+  background-color: #e882e8;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  color: white;
+}
+
+@media only screen and (min-width: 600px) {
+  .detail {
+    text-align: left;
+  }
+  .detail__title {
+    font-size: 2.5rem;
+    margin-bottom: 1em;
+  }
+  .detail__info {
+    max-width: 540px;
+  }
+}
+
+.links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 1.2em;
+}
+
+.links__all {
+  cursor: pointer;
+  width: 3em;
+  height: 3em;
+  padding: 0.8em;
+  outline: 1px solid white;
+  border-radius: 50%;
+  -webkit-transition: -webkit-transform 300ms ease;
+  transition: -webkit-transform 300ms ease;
+  transition: transform 300ms ease;
+  transition: transform 300ms ease, -webkit-transform 300ms ease;
+}
+
+.links__all:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-filter: invert(41%) sepia(75%) saturate(638%) hue-rotate(252deg) brightness(98%) contrast(98%);
+          filter: invert(41%) sepia(75%) saturate(638%) hue-rotate(252deg) brightness(98%) contrast(98%);
+}
+
+@media only screen and (min-width: 600px) {
+  .links {
+    -ms-grid-column: 2;
+    grid-column: 2;
+    margin-left: auto;
+  }
+}
+/*# sourceMappingURL=style.css.map */
